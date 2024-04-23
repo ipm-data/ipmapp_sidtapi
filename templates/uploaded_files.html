@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Files - Innotech</title>
+    <link rel="stylesheet" href="C:\Users\Uday\Downloads\ipm_webapp-main\ipm_webapp-main\static\css\style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Uploaded Files</h2>
+        <ul>
+            {% for file in files %}
+            <li>{{ file.filename }} - Uploaded by: {{ file.username }} on {{ file.upload_time }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

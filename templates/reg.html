@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="IPM_logo.png" alt="Innotech Precision Medicine Logo">
+        </div>
+        <form class="registration-form" id="registrationForm" action="/register" method="POST">
+
+            
+        
+           
+            <h2>Registration</h2>
+            <div class="input-group">
+                <input type="text" id="username" name="username" required placeholder="Username">
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" required placeholder="Password">
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirm_password" name="confirm_password" required
+                    placeholder="Confirm Password">
+            </div>
+
+            <button type="submit" class="login-btn">Register</button>
+            <p id="error-message"></p>
+        </form>
+        <p>Already have an account? <a href="index.html">Login here</a>.</p>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

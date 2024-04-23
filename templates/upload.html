@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files - Innotech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>Innotech Precision Medicine</header>
+        <nav>
+            <div class="hamburger-menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+            <ul class="menu-items">
+                <li><a href="change_password.html">Change Password</a></li>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </nav>
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+
+            <h2>UPLOAD FILES</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="typeOfExperiment">TYPE OF EXPERIMENT</label>
+                    <select id="typeOfExperiment" name="typeOfExperiment">
+                        <option value="Nuclei Acid">Nuclie Acid</option>
+                        <option value="Protein">Protein</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experimentNumber">EXPERIMENT NUMBER</label>
+                    <input type="text" id="experimentNumber" name="experimentNumber">
+                </div>
+            </div>
+            <div class="file-drop-area">
+                <span class="fake-btn">Upload Raw Data File</span>
+                <span class="file-msg">or drag and drop raw data file here</span>
+                <input class="file-input" type="file" name="file1" accept=".xls, .xlsx">
+            </div>
+            <div class="file-drop-area">
+                <span class="fake-btn">Upload Sample Info File</span>
+                <span class="file-msg">or drag and drop sample info file here</span>
+                <input class="file-input" type="file" name="file2" accept=".xls, .xlsx">
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <div id="uploaded-files-list">
+            <h3>Uploaded Files</h3>
+            <ul id="file-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
